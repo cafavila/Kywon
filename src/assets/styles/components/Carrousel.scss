@@ -1,0 +1,15 @@
+.carrousel
+{
+    overflow-x: auto;
+    padding-left: 30px;
+    position: relative;
+    width: 100%;
+}
+.carrousel__container
+{
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom: 10px;
+    transition: 450ms all;
+    transform-origin: center left;
+}
