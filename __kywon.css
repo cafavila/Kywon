@@ -119,7 +119,7 @@ body
 {
     width: 100%;
     overflow: scroll;
-    padding: 30px;
+    padding-left: 30px;
     position: relative;
 }
 .carrousel__container
@@ -141,6 +141,9 @@ body
     display: inline-block;
     cursor: pointer;
     position: relative;
+    font-size: 20px;
+    transition: 450ms all;
+    transform-origin: center left;
 }
 .carrousel__item:hover ~ .carrousel-item
 {

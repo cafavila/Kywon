@@ -18,11 +18,18 @@ module.exports = {
             use: {loader: 'babel-loader'}
         },
         {
+            test: /\.(png|gif|jpe?g)$/,
+            use: [{
+                loader: 'file-loader',
+                options: {name: 'assets,/[hash].[ext]'}
+            }]
+        },
+        {
             test: /\.html$/,
             use: {loader: 'html-loader'}
         },
         {
-            test: /.\(s*)css$/,
+            test: /\.(s*)css$/,
             use: [{loader: MiniCssExtractPlugin.loader}, 'css-loader', 'sass-loader']
         }]
     },

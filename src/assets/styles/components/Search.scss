@@ -1,0 +1,37 @@
+.search
+{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.search__title
+{
+    font-size: 25px;
+    color: #476388;
+}
+
+.input
+{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #476388;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #476388;
+    height: 50px;
+    padding: 0px 20px;
+    width: 70%;
+}
+::placeholder
+{
+    color: #476388;
+}
+.input:hover
+{
+    border-color: #72250F;
+}
+.input:focus
+{
+    outline-style: none;
+}
