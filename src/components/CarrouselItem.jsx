@@ -21,6 +21,6 @@ CarrouselItem.propTypes = {
     title: PropTypes.string,
     year: PropTypes.number,
     duration: PropTypes.number,
-    description: PropTypes.description
+    description: PropTypes.string
 }
 export default CarrouselItem

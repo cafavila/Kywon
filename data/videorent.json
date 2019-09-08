@@ -1,7 +1,7 @@
 {
     "initialState": {
-        "Logeado": "false",
-        "MyList": [],
+        "logeado": "false",
+        "myList": [],
         "tendencias": [{
             "id": 1,
             "slug": "tvshow",
@@ -39,6 +39,19 @@
             "duration": 164,
             "cover": "https://cdn.pixabay.com/photo/2015/09/16/15/34/sunset-942841_1280.jpg",
             "description": "El bella",
+            "source": "http://dummyimage/gismodo.gif"
+        }],
+        "novedades": [{
+            "id": 4,
+            "slug": "Movile",
+            "title": "Dibujos animados",
+            "type": "Scripted",
+            "language": "English",
+            "year": 2011,
+            "contentRating": "14+",
+            "duration": 120,
+            "cover": "https://cdn.pixabay.com/photo/2017/12/28/12/31/sketch-3045125__480.jpg",
+            "description": "Monitos",
             "source": "http://dummyimage/gismodo.gif"
         }]
     }
