@@ -4,19 +4,17 @@ import Search from '../components/Search'
 import Categories from '../components/Categories'
 import Carrousel from '../components/Carrousel'
 import CarrouselItem from '../components/CarrouselItem'
-import useInitialState from '../hooks/useInitialState'
-import {initialState} from '../../data/videorent.json'
 
-const API = initialState
-const Home = () => {
-    const initialStateApi = useInitialState(API)
+const Home = (props) => {
+    const {myList, trends, originals} = props
+    
     return (<Fragment>
     <Search />
-    { initialStateApi.MyList.length > 0 &&
+    { (myList && myList.length > 0) &&
         <Categories title="Mi Lista">
             <Carrousel>
                 { 
-                    initialStateApi.MyList.map(item => <CarrouselItem key={item.id} {...item}/>)
+                    myList.map(item => <CarrouselItem key={item.id} {...item} isList/>)
                 }
             </Carrousel>
         </Categories>
@@ -24,19 +22,19 @@ const Home = () => {
     <Categories title="Destacados">
         <Carrousel>
             { 
-                initialStateApi.tendencias.map(item => <CarrouselItem key={item.id} {...item}/>)
+                trends && trends.map(item => <CarrouselItem key={item.id} {...item}/>)
             }
         </Carrousel>
     </Categories>
     <Categories title="Novedades">
         <Carrousel>
         {
-            initialStateApi.novedades.map(item => <CarrouselItem key={item.id} {...item}/>)
+            originals && originals.map(item => <CarrouselItem key={item.id} {...item}/>)
         }
         </Carrousel>
     </Categories>
 	</Fragment>)}
-	
+
 const mapStateToProps = state => {
 	return {
 		myList: state.myList,

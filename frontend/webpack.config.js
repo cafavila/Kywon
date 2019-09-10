@@ -6,7 +6,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'kywon.app.bundle.js'
+        filename: 'kywon.app.bundle.js',
+        publicPath: '/' 
     },
     resolve: {
         extensions: ['.js', '.jsx']
