@@ -1,0 +1,32 @@
+.notFound__container
+{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    min-height: calc(100vh - 200px);
+}
+.notFound__title
+{
+    font-size: 48px;
+}
+.animated 
+{
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+@keyframes flip 
+{
+    0% {transform: perspective(400px) translateZ(0) rotateY(0) scale(1);animation-timing-function: ease-out;}
+    40% {transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);animation-timing-function: ease-out;}
+    50% {transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);animation-timing-function: ease-in;}
+    80% {transform: perspective(400px) translateZ(0) rotateY(360deg) scale(.95);animation-timing-function: ease-in;}
+    100% {transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);animation-timing-function: ease-in;}
+  }
+  .animated.flip 
+  {
+    backface-visibility: visible;
+    animation-name: flip;
+  }
